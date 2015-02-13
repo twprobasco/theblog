@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for blogpost in blogposts %}
+<div class="blogpost">
+	<div class="blogpost-heading">
+		<div class="blogpost-title">{{blogpost.title}}</div>
+		<div class="blogpost-datetime">{{blogpost.created}}</div>
+	</div>
+	<div class="blogpost-content">{{blogpost.content}}</div>
+	<hr>
+</div>
+{% endfor %}
+
+{% endblock %}
