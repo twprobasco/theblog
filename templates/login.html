@@ -2,22 +2,30 @@
 
 {% block content %}
 
-<form method="post">
-	<label>
-		Username
-		<input type="text" name="username" value={{username}}>
-	</label>
-	<br>
-	<label>
-		Password
-		<input type="password" name="password" value={{password}}>
-	</label>
-	<br>
-	<div style="color: red">{{login_error}}</div>
-	<br>
-	<input type="submit">
-</form>
+<div id="titleblock">theblog</div>
 
-Click <a href="signup">here</a> to create an account
+<div id="loginframe">
+	<form method="post">
+		<div id="username-label">username</div>
+		<div id="username-textbox">
+			<input type="text" name="username" value={{username}}>
+		</div>
+
+		<div id="password-label">password</div>
+		<div id="password-textbox">
+			<input type="password" name="password" value={{password}}>
+		</div>
+
+		<div id="login-error" style="color: red">{{login_error}}</div>
+		
+		<div id="login-button">
+			<input type="submit">
+		</div>
+	</form>
+
+	<div id="signup-redirect">
+		don't have an account? click <a href="signup">here</a> to signup
+	</div>
+</div>
 
 {% endblock %}
