@@ -2,34 +2,38 @@
 
 {% block content %}
 
-<form method="post">
-	<label>
-		User Name
-		<input type="text" name="username" value={{username}}>
-		<div style="color: red">{{username_error}}</div>
-	</label>
-	<br>
-	<label>
-		Password
-		<input type="password" name="password" value={{password}}>
-		<div style="color: red">{{pw_error}}</div>
-	</label>
-	<br>
-	<label>
-		Verify Password
-		<input type="password" name="password_verify" value={{password_verify}}>
-		<div style="color: red">{{pw_v_error}}</div>
-	</label>
-	<br>
-	<label>
-		Email (Optional)
-		<input type="text" name="email" value={{email}}>
-		<div style="color: red">{{email_error}}</div>
-	</label>
-	<br><br>
-	<input type="submit">
-</form>
+<div id="signupframe">
+	<form method="post">
+		<div id="username-label">username</div>
+		<div id="username-textbox">
+			<input type="text" name="username" value={{username}}>
+			<div style="color: red">{{username_error}}</div>
+		</div>
+		
+		<div id="password-label">password</div>
+		<div id="password-textbox">
+			<input type="password" name="password" value={{password}}>
+			<div style="color: red">{{pw_error}}</div>
+		</div>
 
-Already have an account? Click <a href="login">here</a> to login
+		<div id="password-verify-label">re-type password</div>
+		<div id="password-verify-textbox">
+			<input type="password" name="password_verify" value={{password_verify}}>
+			<div style="color: red">{{pw_v_error}}</div>
+		</div>
+		
+		<div id="email-label">email (optional)</div>
+		<div id="email-textbox">
+			<input type="text" name="email" value={{email}}>
+			<div style="color: red">{{email_error}}</div>
+		</div>
+
+		<input type="submit">signup
+	</form>
+	
+	<div id="login-redirect">
+		already have an account? click <a href="login" style="color:white">here</a> to login
+	</div>
+</div>
 
 {% endblock %}
