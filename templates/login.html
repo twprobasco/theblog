@@ -4,25 +4,19 @@
 
 <div id="loginframe">
 	<form method="post">
-		<div id="username-label">username</div>
-		<div id="username-textbox">
-			<input type="text" name="username" value={{username}}>
-		</div>
+		<input class="input" id="username-textbox" type="text" name="username" value={{username}}>
+		<div class="labels" id="username-label">username</div>
 
-		<div id="password-label">password</div>
-		<div id="password-textbox">
-			<input type="password" name="password" value={{password}}>
-		</div>
-
-		<div id="login-error" style="color: red">{{login_error}}</div>
+		<input class="input" id="password-textbox" type="password" name="password" value={{password}}>
+		<div class="labels" id="password-label">password</div>
 		
-		<div id="login-button">
-			<input type="submit">
-		</div>
+		<div id="login-error">{{login_error}}</div>
+		
+		<input id="login-button" type="submit" value="login">
 	</form>
 
 	<div id="signup-redirect">
-		don't have an account? click <a href="signup" style="color: white">here</a> to signup
+		don't have an account? click <a href="signup" style="color: white; text-decoration: none; font-weight: normal;">here</a> to signup
 	</div>
 </div>
 
