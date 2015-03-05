@@ -4,35 +4,27 @@
 
 <div id="signupframe">
 	<form method="post">
-		<div id="username-label">username</div>
-		<div id="username-textbox">
-			<input type="text" name="username" value={{username}}>
-			<div style="color: red">{{username_error}}</div>
-		</div>
+		<input class="input" id="username-textbox" type="text" name="username" value={{username}}>
+		<div class="labels" id="username-label">username</div>
+		<div class="error-msg" id="username-error">{{username_error}}</div>
 		
-		<div id="password-label">password</div>
-		<div id="password-textbox">
-			<input type="password" name="password" value={{password}}>
-			<div style="color: red">{{pw_error}}</div>
-		</div>
+		<input class="input" id="password-textbox" type="password" name="password" value={{password}}>
+		<div class="labels" id="password-label">password</div>
+		<div class="error-msg" id="password-error">{{pw_error}}</div>
 
-		<div id="password-verify-label">re-type password</div>
-		<div id="password-verify-textbox">
-			<input type="password" name="password_verify" value={{password_verify}}>
-			<div style="color: red">{{pw_v_error}}</div>
-		</div>
+		<input class="input" id="password-verify-textbox" type="password" name="password_verify" value={{password_verify}}>
+		<div class="labels" id="password-verify-label">re-type password</div>
+		<div class="error-msg" id="password-verify-error">{{pw_v_error}}</div>
 		
-		<div id="email-label">email (optional)</div>
-		<div id="email-textbox">
-			<input type="text" name="email" value={{email}}>
-			<div style="color: red">{{email_error}}</div>
-		</div>
+		<input class="input" id="email-textbox" type="text" name="email" value={{email}}>
+		<div class="labels" id="email-label">email (optional)</div>
+		<div class="error-msg" id="email-error">{{email_error}}</div>
 
-		<input type="submit">signup
+		<input id="signup-button" type="submit" value="signup">
 	</form>
 	
 	<div id="login-redirect">
-		already have an account? click <a href="login" style="color:white">here</a> to login
+		already have an account? click <a href="login" style="color: white; text-decoration: none; font-weight: normal;">here</a> to login
 	</div>
 </div>
 
