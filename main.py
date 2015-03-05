@@ -272,7 +272,7 @@ class FrontHandler(Handler):
                                         "LIMIT 10",
                                         user_id)
                 # render front.html with the posts
-                self.render('front.html', blogposts = blogposts)
+                self.render('front.html', username = user.username, blogposts = blogposts)
             else:
                 # if the hash didn't match, redirect to logout
                 self.redirect('/logout')

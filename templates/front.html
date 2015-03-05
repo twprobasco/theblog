@@ -2,8 +2,10 @@
 
 {% block content %}
 
-<a href="newpost">Create a new post</a>
-<hr>
+<div id="newpost-redirect">
+	<a href="newpost">create a new post</a>
+</div>
+
 {% for blogpost in blogposts %}
 <div class="blogpost">
 	<div class="blogpost-heading">
@@ -11,10 +13,7 @@
 		<div class="blogpost-datetime">{{blogpost.created}}</div>
 	</div>
 	<div class="blogpost-content">{{blogpost.content}}</div>
-	<hr>
 </div>
 {% endfor %}
-
-<a href="logout">logout</a>
 
 {% endblock %}

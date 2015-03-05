@@ -6,13 +6,25 @@
 	</head>
 
 	<body>
-		<div id="titleblock">
-			<h1>the<font style="color:white">blog</font></h1>
+		<div id="top-wrapper">
+			<div id="titleblock-front">
+				the<font style="color:white">blog</font>
+			</div>
+
+			<div id="nav-bar-top">
+				<div id="welcome_username">
+					welcome, {{username}}
+				</div>
+				<div id="logout">
+					<a href="logout">logout</a>
+				</div>
+			</div>
 		</div>
 
 		<div id="content">
 			{% block content %}
 			{% endblock %}
 		</div>
+
 	</body>
 </html>
