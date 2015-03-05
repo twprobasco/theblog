@@ -229,3 +229,21 @@ a{
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
+/* styling for permalink page */
+.blogpost-pl{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+}
+
+#front-redirect{
+    width: 150px;
+    height: 30px;
+    margin-left: auto;
+    margin-top: 15px;
+    text-align: right;
+}
+/* styling for newpost page */
