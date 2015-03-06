@@ -1,21 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form method="post">
-	<label>
-		<div>Title</div>
-		<input type="text" name="title" value={{title}}>
-	</label>
-	
-	<label>
-		<div>Enter thoughts here...</div>
-		<textarea name="content">{{content}}</textarea>
-	</label>
-	
-	<div class="error">{{error}}</div>
-	
-	<input type="submit">
-</form>
+<div id="front-redirect">
+	<a href="front">back to front (this will discard any changes)</a>
+</div>
 
-<a href="front">Back to front (this will discard any changes)</a>
+<div id="newpost-outer-wrapper">
+	<form method="post">
+		<div id="newpost-title-wrapper">
+			<div id="newpost-title-label" class="labels">title</div>
+			<div id="newpost-title-textbox">
+				<input id="newpost-title" type="text" name="title" value={{title}}>
+			</div>
+		</div>
+
+		<div id="newpost-content-wrapper">
+			<div id="newpost-content-label" class="labels">enter thoughts here...</div>
+			<div id="newpost-content-textarea">
+				<textarea id="newpost-content" name="content">{{content}}</textarea>
+			</div>
+		</div>
+		
+		<div id="newpost-bottom-wrapper">
+			<div id="newpost-error" class="error-msg">{{error}}</div>
+			
+			<div id="post-button-wrapper">
+				<input id="post-button" type="submit" value="post">
+			</div>
+		</div>
+	</form>
+</div>
 {% endblock %}
